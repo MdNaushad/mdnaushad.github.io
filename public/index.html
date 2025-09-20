@@ -25,6 +25,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <!-- Catchpoint RUM script (deferred) -->
+    <script defer src="https://portalstage.catchpoint.com/jp/100329/latest/InitialLoadScript.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -38,6 +40,16 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  -->
+  <!-- Optional: switch beacon from unload/beforeunload to pageHide -->
+  <!--
+  <script type="text/javascript">
+  if (window.RProfiler) {
+    window.RProfiler.usePageHide();
+  } else {
+    window.addEventListener('GlimpseLoaded', () => window.RProfiler.usePageHide());
+  }
+  </script>
+  -->
   </body>
 </html>
