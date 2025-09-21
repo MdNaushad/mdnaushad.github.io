@@ -5,7 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement, {
+    // Specify any additional options here
+    onUncaughtError: (error) => {
+      console.error('Uncaught error in React:', error);
+    },
+    onCaughtError: (error) => {
+      console.error('Caught error in React:', error);
+    },
+    onRecoverableError: (error) => {
+      console.error('Recoverable error in React:', error);
+    },
+  }
 );
 root.render(
   <React.StrictMode>

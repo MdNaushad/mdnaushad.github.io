@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar: React.FC = () => {
+  // https://vinbhaskara.github.io/personal/
   return (
     <nav className="navbar">
       <div className="nav-inner">

@@ -5,7 +5,9 @@ const ThemeSwitcher: React.FC = () => {
   const {theme, toggle} = useContext(ThemeContext);
   return (
     <button className="theme-switch" onClick={toggle} aria-label="Toggle theme">
-      {theme === 'light' ? '🌞' : '🌙'}
+      {
+        theme === 'dark' ? '🌙' : '☀️'
+      }
     </button>
   );
 };
